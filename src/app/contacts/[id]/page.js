@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Button from "@/app/components/Button";
 
 const page = ({ params }) => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const page = ({ params }) => {
       <Link href="/contacts">Back</Link>
       <button onClick={() => router.replace("/contacts")}>Back</button>
       <div>{count}</div>
-      <button className="bg-green-500" onClick={() => setCount(count + 1)}>Increment</button>
+      <Button onClick={() => setCount(count + 1)}>Increment</Button>
     </div>
   );
 };
